@@ -1,0 +1,101 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: orange;
+}
+
+
+/* Start Game */
+.start-game{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.689);
+    position: absolute;
+    margin-top: -10px;
+    z-index: 10;
+}
+.start-game .start{
+    position: absolute;
+    font-size: 100px;
+    color: white;
+    text-transform: uppercase;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    padding: 20px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+/* End Game */
+
+/*Info Of User */
+.container-info{
+    width: 1080px;
+    background-color: #efefef;
+    margin: 10px auto;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    user-select: none;
+}
+.container-info .name,
+.container-info .tries{
+    font-weight: bold;
+    font-size: 25px;
+}
+.container-info .tries > span{
+    color: red;
+}
+/*Info Of User */
+
+/* Start Images Box */
+.parent-box{
+    width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.parent-box .box-image{
+    position: relative;
+    width: 216px;
+    cursor: pointer;
+    user-select: none;
+}
+.parent-box .box-image::before{
+    position: absolute;
+    content: "!";
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    width: 100%;
+    height: calc(100% - 4px);
+    background-color: #0174BE;
+    z-index: 1;
+}
+.parent-box .box-image img{
+    width: 100%;
+    position: relative;
+}
+.is-fliped,
+.has-match{
+    z-index: 2;
+}
+.on-flip{
+    /* transform: scale(-1,1); */
+}
+.stop-clicking{
+    pointer-events: none;
+}
+/* End Images Box */
+
+
